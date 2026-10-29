@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 4: Songwriting &amp; Arrangement</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script>
+/* ============================================================
+   TEACHER SETTINGS: paste links here. Leave '' if you don't have one yet.
+   ============================================================ */
+const LINKS = {
+  coach: 'https://student.schoolai.com/join?code=KL65-67L2',
+  uploads: {
+    'rotation-1': '',
+    'rotation-2': '',
+    'rotation-3': 'https://mcacubs.instructure.com/courses/6309/assignments/516909',
+    'rotation-4': '',
+    'rotation-5': '',
+    'rotation-6': '',
+    'rotation-9': ''
+  },
+  /* Videos without a link open a YouTube search instead. */
+  videos: {
+    'how-chords-work': '',
+    'born-in-the-usa': '',
+    'eleanor-rigby': '',
+    'day-o': '',
+    'therefore-i-am': '',
+    'finneas': '',
+    'find-another-you': '',
+    'angeles': '',
+    'over-the-rainbow': '',
+    'yesterday': '',
+    'georgia': ''
+  }
+};
+</script>
+<style>
+:root{
+  --bg:#F3F5F9; --surface:#FFFFFF; --ink:#18213D; --muted:#55607A;
+  --line:#C9D0DE; --accent:#2A7F87; --mark:#FFC93C; --mark-ink:#3A2C00;
+  --soft:#E6EBF3; --act:#EAF5F5;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#121827; --surface:#1A2236; --ink:#E7EAF3; --muted:#A3ACC2;
+    --line:#38425C; --accent:#5FC2C9; --mark:#FFC93C; --mark-ink:#2A2000;
+    --soft:#222C44; --act:#17303A; color-scheme: dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.075rem;line-height:1.65}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--mark);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.3rem;font-weight:700;margin-top:1.8em}
+h4{font-size:1.05rem;font-weight:700;margin-top:1.2em}
+p,ul,ol{margin:0 0 1em}
+li{margin-bottom:.35em}
+.sr{position:absolute;left:-9999px}
+
+.shell{display:grid;grid-template-columns:270px 1fr;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.6rem 1.2rem;border-right:1px solid var(--line);background:var(--surface)}
+.brand{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--ink);display:block;margin-bottom:1.4rem}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li{margin:0}
+nav.side a.lesson-link{display:grid;grid-template-columns:2rem 1fr;align-items:baseline;gap:.4rem;padding:.55rem .6rem;border-radius:8px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:500;font-size:.98rem;line-height:1.3}
+nav.side a.lesson-link .n{color:var(--muted);font-weight:700}
+nav.side a.lesson-link:hover{background:var(--soft)}
+nav.side a.lesson-link[aria-current="page"]{background:var(--mark);color:var(--mark-ink)}
+nav.side a.lesson-link[aria-current="page"] .n{color:var(--mark-ink)}
+.side-coach{margin-top:1.6rem}
+nav.side a.lesson-link small{display:block;font-weight:500;font-size:.8rem;color:var(--muted);margin-top:.1rem}
+nav.side a.lesson-link[aria-current="page"] small{color:var(--mark-ink)}
+nav.side a.toolkit-link{margin-top:.6rem;border-top:1px solid var(--line);border-radius:0 0 8px 8px;padding-top:.8rem}
+.map .date{display:block;font-family:var(--display);font-size:.85rem;color:var(--muted);font-weight:500}
+.side-note{margin-top:.8rem;font-size:.9rem;color:var(--muted)}
+main{padding:2.4rem clamp(1.2rem,4vw,3.5rem) 4rem;min-width:0}
+.page{max-width:46rem}
+.page[hidden]{display:none}
+.mobile-nav{display:none}
+@media (max-width:860px){
+  .shell{grid-template-columns:1fr}
+  nav.side{display:none}
+  .mobile-nav{display:flex;gap:.6rem;align-items:center;position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line);padding:.7rem 1rem}
+  .mobile-nav .brand{margin:0;font-size:1.05rem;flex:0 0 auto}
+  .mobile-nav select{flex:1;min-width:0;font:inherit;font-family:var(--display);padding:.45rem .5rem;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+}
+
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:38rem}
+.staff-wrap{margin:2rem 0 .5rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1rem .4rem;overflow-x:auto}
+.staff{width:100%;min-width:520px;height:auto;display:block}
+.staff line{stroke:var(--ink);stroke-width:1.4;opacity:.75}
+.staff .note ellipse{fill:var(--ink);transition:fill .15s}
+.staff .note .stem{stroke:var(--ink);stroke-width:1.6;opacity:1}
+.staff .note text{font-family:var(--display);font-weight:700;font-size:13px;fill:var(--muted);text-anchor:middle}
+.staff .note:hover ellipse,.staff .note:focus ellipse{fill:var(--accent)}
+.staff .note:focus{outline:none}
+.staff .note.ring ellipse{fill:var(--mark)}
+.staff-caption{min-height:1.6em;font-family:var(--display);font-weight:700;margin:.4rem 0 0;padding:0 .2rem}
+.hint{font-size:.92rem;color:var(--muted)}
+.map{list-style:none;padding:0;margin:2rem 0 0}
+.map li{display:grid;grid-template-columns:2.4rem 1fr;gap:.6rem;padding:.8rem 0;border-top:1px solid var(--line);margin:0}
+.map .n{font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--accent)}
+.map a{font-family:var(--display);font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--ink)}
+.map a:hover{text-decoration:underline}
+.map p{margin:.15rem 0 0;color:var(--muted);font-size:.98rem}
+
+.lesson-num{font-family:var(--display);font-weight:700;color:var(--accent);font-size:1rem;margin:0 0 .3rem}
+.goal{font-size:1.18rem;border-left:5px solid var(--mark);padding:.2rem 0 .2rem 1rem;margin:1rem 0 1.6rem}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.3rem;margin:1.2rem 0}
+.box h3:first-child,.box h4:first-child{margin-top:0}
+.activity{background:var(--act);border:2px solid var(--accent);border-radius:14px;padding:1.2rem 1.4rem;margin:2rem 0}
+.activity h3{margin-top:0}
+.example{font-style:italic;color:var(--muted);border-left:3px solid var(--line);padding-left:.9rem;margin:.6rem 0 1rem}
+.prose-example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.3rem;margin:1rem 0;font-size:1rem}
+.prose-example p:last-child{margin-bottom:0}
+.lyric{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.3rem;margin:1rem 0}
+.lyric h4{margin:.8em 0 .3em;font-size:.95rem;color:var(--accent)}
+.lyric h4:first-child{margin-top:0}
+.lyric p{margin:0 0 .2em}
+pre.chart{font-family:var(--mono);font-size:.92rem;line-height:1.45;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem;overflow-x:auto;margin:1rem 0}
+pre.chart b{color:var(--accent)}
+ol.steps{padding-left:1.4rem}
+ol.steps li::marker{font-family:var(--display);font-weight:800;color:var(--accent)}
+.check{padding-left:0}
+.check li{list-style:none}
+.check label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.check input{margin-top:.4rem;width:1.1rem;height:1.1rem;accent-color:var(--accent);flex:0 0 auto}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 1rem;padding:0;list-style:none}
+.tags li{margin:0;background:var(--soft);border-radius:999px;padding:.2rem .8rem;font-family:var(--display);font-weight:500;font-size:.95rem}
+
+.table-wrap{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.98rem}
+th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--display);font-weight:700}
+
+details{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:.8rem 0}
+details summary{cursor:pointer;padding:1rem 1.2rem;font-family:var(--display);font-weight:700;font-size:1.12rem;list-style:none;display:flex;gap:.7rem;align-items:baseline}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+";font-weight:800;color:var(--accent);width:1rem;flex:0 0 auto}
+details[open] summary::before{content:"−"}
+details .inner{padding:0 1.2rem 1rem}
+
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1rem;border:2px solid var(--ink);background:var(--surface);color:var(--ink);padding:.5rem 1rem;border-radius:999px;cursor:pointer;text-decoration:none;line-height:1.3}
+.btn:hover{background:var(--soft)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary:hover{opacity:.9}
+.btn-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0}
+.upload-note{font-size:.95rem;color:var(--muted);margin:.4rem 0 0}
+
+/* videos */
+.vids{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:1rem}
+.vids li{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.vid-media{position:relative;aspect-ratio:16/9;background:var(--soft);border:0;padding:0;cursor:pointer;width:100%;display:block}
+.vid-media img{width:100%;height:100%;object-fit:cover;display:block}
+.vid-media .play{position:absolute;inset:0;margin:auto;width:3.2rem;height:3.2rem;border-radius:50%;background:rgba(24,33,61,.85);display:flex;align-items:center;justify-content:center}
+.vid-media .play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.vid-media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-search{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:var(--soft);font-family:var(--display);font-weight:700;text-decoration:none;color:var(--ink)}
+.vid-body{padding:.7rem .9rem .9rem}
+.vid-body strong{font-family:var(--display);display:block;line-height:1.25}
+.vid-body span{display:block;font-size:.92rem;color:var(--muted)}
+.vid-body p{margin:.4rem 0 0;font-size:.92rem}
+
+.timer{font-family:var(--display);font-weight:800;font-size:clamp(3rem,10vw,4.6rem);letter-spacing:.02em;font-variant-numeric:tabular-nums;margin:.2rem 0}
+.timer.done{color:var(--accent)}
+.form-row{display:flex;gap:.5rem;margin:1rem 0;flex-wrap:wrap}
+.form-row div{flex:1 1 4rem;text-align:center;font-family:var(--display);font-weight:800;font-size:1.8rem;padding:.8rem .4rem;border-radius:10px;background:var(--soft)}
+.form-row div.b{background:var(--mark);color:var(--mark-ink)}
+.form-row small{display:block;font-size:.8rem;font-weight:500}
+
+.kb{position:relative;height:150px;max-width:560px;margin:1rem 0;user-select:none;touch-action:manipulation}
+.kb button{position:absolute;top:0;border:1px solid #18213D;cursor:pointer;font-family:var(--display);font-weight:700;font-size:.75rem;display:flex;align-items:flex-end;justify-content:center;padding-bottom:.4rem}
+.kb .w{height:150px;background:#FFFFFF;color:#18213D;border-radius:0 0 6px 6px;z-index:1}
+.kb .k{height:92px;background:#18213D;color:#E7EAF3;border-radius:0 0 4px 4px;z-index:2}
+.kb button.sel{background:var(--mark);color:var(--mark-ink)}
+.kb-out{font-family:var(--display);font-weight:700;font-size:1.1rem;min-height:1.6em}
+
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);flex-wrap:wrap}
+.pager a{font-family:var(--display);font-weight:700;text-decoration:none}
+.pager a:hover{text-decoration:underline}
+footer{margin-top:3rem;font-size:.9rem;color:var(--muted)}
+.sources{font-size:.95rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="mobile-nav">
+  <a class="brand" href="#home">Songwriting</a>
+  <label for="jump" class="sr">Go to lesson</label>
+  <select id="jump"></select>
+</div>
+
+<div class="shell">
+<nav class="side" aria-label="Lessons">
+  <a class="brand" href="#home">Unit 4: Songwriting &amp; Arrangement</a>
+  <ol id="side-list"></ol>
+  <div class="side-coach"><a class="btn primary" data-coach href="#">Songwriting Studio Coach</a></div>
+  <p class="side-note">Stuck on theory? The Theory Toolkit explains scales, chords, and melody. Open it any time.</p>
+</nav>
+
+<main id="main">
+
+<!-- ================= HOME ================= -->
+<section class="page hero" id="home" data-title="Unit map">
+  <p class="lesson-num">Unit 4</p>
+  <h1>Songwriting &amp; Arrangement</h1>
+  <p class="lead">Songwriting is an art, and it’s also a craft you can practice. In this unit you’ll use the exercises professional songwriters use to find ideas, break through blocks, and finish real songs.</p>
+
+  <div class="staff-wrap">
+    <svg class="staff" viewBox="0 0 700 160" role="group" aria-label="The nine rotations as notes climbing a C major scale. Select a note to open that rotation.">
+      <line x1="20" y1="40" x2="680" y2="40"/>
+      <line x1="20" y1="52" x2="680" y2="52"/>
+      <line x1="20" y1="64" x2="680" y2="64"/>
+      <line x1="20" y1="76" x2="680" y2="76"/>
+      <line x1="20" y1="88" x2="680" y2="88"/>
+      <line x1="72" y1="100" x2="108" y2="100"/>
+      <g id="notes"></g>
+    </svg>
+    <p class="staff-caption" id="staff-caption" aria-live="polite">Tap a note to hear it and open that rotation.</p>
+  </div>
+  <p class="hint">Each rotation climbs one step up the scale. The last three are your Song Draft Project.</p>
+
+  <h3>Five exercises, five skills</h3>
+  <p>Each core exercise trains a different part of songwriting. Together they make a complete toolkit.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Exercise</th><th>Skill it builds</th></tr>
+    <tr><td>Object Writing</td><td>Imagery</td></tr>
+    <tr><td>No Rhyme Songs</td><td>Storytelling</td></tr>
+    <tr><td>Two-Chord Songs</td><td>Melody</td></tr>
+    <tr><td>AABA Song Form</td><td>Structure</td></tr>
+    <tr><td>Verb Strengthening</td><td>Language power</td></tr>
+  </table></div>
+
+  <ol class="map" id="map"></ol>
+  <p class="hint">Need help with scales, chords, or melody? Open the <a href="#toolkit">Theory Toolkit</a>.</p>
+</section>
+
+<!-- ================= LESSON 1 ================= -->
+<section class="page" id="rotation-1" data-date="Monday 10/05" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956675" data-title="Introduction to Songwriting" data-blurb="What a song is made of, where ideas come from, and how to start." hidden>
+  <p class="lesson-num"></p>
+  <h2>Introduction to Songwriting</h2>
+  <p class="goal">Learn what a song is made of, how to catch ideas before they disappear, and how to start writing about what matters to you.</p>
+
+  <h3>What a song is made of</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Part</th><th>What it is</th></tr>
+    <tr><td>Chords</td><td>Two or more tones played together in harmony</td></tr>
+    <tr><td>Melody</td><td>A sequence of single tones: the part you sing</td></tr>
+    <tr><td>Rhythm</td><td>The song’s beat or pulse</td></tr>
+    <tr><td>Lyrics</td><td>The words</td></tr>
+  </table></div>
+  <p>Most successful songwriters are strongest in one of these areas. Very few people do it all, and even writers who can often team up with others. A great song frequently comes from a blend of different styles and personalities.</p>
+  <ul class="vids">
+    <li data-key="how-chords-work" data-title="How Chords Work" data-note="Watch first: how chords are built and why they sound the way they do."></li>
+  </ul>
+
+  <h3>Catch your ideas</h3>
+  <p>Ideas show up anywhere: in the car, in the shower, even in dreams. Paul McCartney has said some of his best songs came to him while he was asleep.</p>
+  <p>When a melody or a line pops into your head, capture it right away. Your phone is always with you: type the words in a notes app or hum the tune into a voice memo. Don’t tell yourself you’ll remember it later. Even the ideas that feel unforgettable fade fast, and some great songs were never finished because the writer couldn’t get that first spark back.</p>
+
+  <h3>Write what you know and feel</h3>
+  <p>Your way of seeing the world is your best source of material. The moods you live with will show up in your songs, so write about what you actually know and feel, and your song will sound like you. When listeners recognize a bit of themselves in your words, the song stays with them.</p>
+
+  <h3>When music and lyrics match (or don’t)</h3>
+  <p>In many great songs, the music and the words fit each other perfectly. Listen to the difference between a major and a minor chord:</p>
+  <div class="btn-row">
+    <button class="btn" data-chord="C">C major</button>
+    <button class="btn" data-chord="Cm">C minor</button>
+  </div>
+  <ul>
+    <li><strong>Minor chords</strong> often sit under sadder, deeper, more inward-looking songs.</li>
+    <li><strong>Major chords</strong> tend to sound happier and more hopeful.</li>
+    <li>Sometimes the mood of the lyrics <strong>contrasts</strong> with the music. That bittersweet clash can make a song even more powerful.</li>
+  </ul>
+  <ul class="vids">
+    <li data-yt="EBUFtoC2oj4" data-title="Paint It Black" data-by="The Rolling Stones (written by Mick Jagger and Keith Richards)" data-note="Minor chords, dark mood."></li>
+    <li data-yt="lSD_L-xic9o" data-title="From The Start" data-by="Laufey" data-note="Major chords, bright and hopeful."></li>
+    <li data-yt="Mbgo9VhJzak" data-title="I’ll Never Fall in Love Again" data-by="Dionne Warwick (written by Burt Bacharach and Hal David)" data-note="Contrast: breezy, cheerful music with heartbroken lyrics."></li>
+  </ul>
+
+  <h3>Tips to start composing</h3>
+  <ol class="steps">
+    <li><strong>Find a message you care about.</strong> Write about what interests you and what you know. If a subject matters to you, it may matter to others too. If you don’t care about it, your listeners won’t either.</li>
+    <li><strong>Keep it simple.</strong> The easiest melodies are often the most memorable.</li>
+    <li><strong>Find a simple set of chords.</strong> Explore your keyboard or guitar until you find a few that fit your idea.</li>
+    <li><strong>Find a place to write.</strong> Somewhere quiet where you can clear your head.</li>
+    <li><strong>Share your work.</strong> Feedback is how songs get better. Take in the praise and think about the criticism. Don’t ignore either one. Before you change anything, ask yourself what feels true to your song.</li>
+  </ol>
+
+  <div class="activity">
+    <h3>Class activities in GarageBand</h3>
+    <p>Open a new GarageBand session and change the instrument to piano.</p>
+    <h4>Activity 1: Create a melody</h4>
+    <ol class="steps">
+      <li>Using the MIDI keyboard, play the C major scale up and down.</li>
+      <li>Create a simple melody from those notes.</li>
+      <li>Adjust note velocities to add dynamics (louder and softer notes).</li>
+      <li>Experiment with note lengths.</li>
+      <li>Record your melody.</li>
+    </ol>
+    <h4>Activity 2: Build a chord progression</h4>
+    <ol class="steps">
+      <li>Create a new instrument track.</li>
+      <li>Choose a chord progression in C major (see the <a href="#toolkit">Theory Toolkit, Part 6</a> for the chords).</li>
+      <li>Try the same progression with different instrument sounds.</li>
+      <li>Record your chord progression.</li>
+    </ol>
+    <p><strong>Save your GarageBand session!</strong></p>
+    <div class="btn-row"><a class="btn" data-upload="rotation-1" href="#">Upload your work</a></div>
+  </div>
+</section>
+
+<!-- ================= LESSON 2 ================= -->
+<section class="page" id="rotation-2" data-date="Thursday 10/08" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956674" data-title="Song Concepts and Object Writing" data-blurb="Find what your song is about, then mine your senses for vivid images." hidden>
+  <p class="lesson-num"></p>
+  <h2>Song Concepts and Object Writing</h2>
+  <p class="goal">Find a clear idea for your song, then use a 10-minute sensory freewrite to collect vivid images you can turn into lyrics.</p>
+
+  <h3>Start with a concept</h3>
+  <p>Before you write lyrics, it helps to have a <strong>concept</strong>: a roadmap that keeps you headed toward a finished song.</p>
+  <ul>
+    <li><strong>Write one sentence</strong> that explains what your song is about. That sentence is your song’s thesis.</li>
+    <li><strong>Check back often.</strong> Do your new lines still support that sentence?</li>
+    <li><strong>If the lyrics pull somewhere else,</strong> you may need a new thesis, or you may have two different songs.</li>
+    <li><strong>One song, one idea.</strong> Every line should support it. When two ideas compete, neither one works.</li>
+  </ul>
+  <p>Writing with a partner? Start by asking each other what matters most in your lives and what you care about. Keep talking until you find an idea that feels real to both of you.</p>
+  <h4>Subjects that have inspired songwriters forever</h4>
+  <ul class="tags">
+    <li>Love</li><li>Friendship</li><li>Family</li><li>Conflict</li><li>Loss</li><li>Music and song</li><li>Towns and travel</li><li>Faith, hope, and belief</li><li>Motivation and sports</li><li>Past, present, and future</li><li>States of mind</li>
+  </ul>
+  <p>The subjects are broad. What makes your song unique is the situation you create and the feeling you bring to it.</p>
+
+  <h3>What is object writing?</h3>
+  <p>Object writing is a 10-minute freewrite that focuses only on <strong>sensory details</strong>. Instead of writing about your thoughts or opinions, you describe what you can see, hear, smell, taste, and touch. Berklee College of Music professor Pat Pattison made this exercise popular, and songwriters around the world use it.</p>
+  <h4>Why the senses?</h4>
+  <p>Senses are closely tied to memory. A smell can send you straight back to a moment from your childhood. When you practice writing with sensory detail, you open a door to memories and feelings you can use in songs.</p>
+
+  <h3>Example: the kitchen table</h3>
+  <div class="prose-example">
+    <p>The wooden surface feels rough under my fingertips, tiny scratches catching my nail as I drag it across. Coffee rings stain the oak in overlapping circles, some dark brown, others faded to pale yellow. The morning light streams through the window, casting long shadows from the salt and pepper shakers. I can smell yesterday’s garlic still lingering, mixed with the fresh scent of oranges in the fruit bowl. The table creaks when I lean my elbows on it, a familiar sound that echoes through the empty house. Crumbs from this morning’s toast scatter across the surface, rough against my palm when I brush them away. The wood grain runs in long, wavy lines like rivers viewed from an airplane. A sticky spot near the edge catches my sleeve, probably honey from yesterday’s tea. The chairs scrape against the linoleum when I pull them out, metal legs against worn flooring. Sunlight warms the surface where it hits, while the shadowed areas remain cool to the touch. I can taste the dust motes floating in the light beam, dry and metallic on my tongue.</p>
+  </div>
+
+  <h3>Why object writing works</h3>
+  <ul>
+    <li>It builds descriptive language that makes lyrics vivid and memorable.</li>
+    <li>Sensory triggers reach memories you wouldn’t think of on purpose.</li>
+    <li>It produces surprising images and metaphors.</li>
+    <li>It builds stamina and proves you always have something to write about.</li>
+    <li>It breaks perfectionism, because the process matters more than the product.</li>
+    <li>It gives you raw material to mine for songs later.</li>
+  </ul>
+
+  <h3>Turning object writing into lyrics</h3>
+  <ol class="steps">
+    <li>Look for the emotion hiding under your sensory details.</li>
+    <li>Find the universal experience inside the specific details.</li>
+    <li>Find the story the details are telling.</li>
+    <li>Pull out your strongest images to use as lyric hooks.</li>
+  </ol>
+  <p>From the kitchen table freewrite, you might pull out:</p>
+  <div class="lyric">
+    <p>Coffee rings like memories overlapping</p>
+    <p>Shadows dancing from the salt and pepper shakers</p>
+    <p>Honey-sticky moments that catch my sleeve</p>
+  </div>
+
+  <details>
+    <summary>Advanced object writing techniques</summary>
+    <div class="inner">
+      <ul>
+        <li><strong>Time travel:</strong> choose an object from your past, like a childhood toy, and describe it in the present tense. This often unlocks strong memories.</li>
+        <li><strong>Seasons:</strong> write about the same object in different seasons. A park bench in July and a park bench in January are two different worlds.</li>
+        <li><strong>Perspective shifts:</strong> write about the object as a little kid, as an adult, or as someone from another time or place.</li>
+        <li><strong>Destination writing:</strong> songwriter Andrea Stolpe uses a version of this exercise that starts with a <em>place, person, or time</em> instead of an object, like “motel room” or “last day of summer.” It often leads straight to a song’s central idea.</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="activity">
+    <h3>Object Writing Practice Challenge</h3>
+    <ol class="steps">
+      <li>Choose a simple object: a coffee mug, a pencil, an apple, an old photograph, car keys.</li>
+      <li>Start the timer and write continuously about it using only your five senses.</li>
+      <li>Keep your pen moving, even if you repeat words.</li>
+      <li>Avoid emotions and opinions. Stick to sensory details.</li>
+      <li>Don’t worry about grammar or spelling. This is about flow, not perfection.</li>
+    </ol>
+    <div class="box">
+      <h4>Freewrite timer</h4>
+      <div class="timer" id="timer">10:00</div>
+      <div class="btn-row">
+        <button class="btn primary" id="t-start">Start</button>
+        <button class="btn" id="t-reset">Reset</button>
+      </div>
+      <p class="hint" id="t-status" aria-live="polite"></p>
+    </div>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+      <a class="btn" data-upload="rotation-2" href="#">Upload your Object Writing</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LESSON 3 ================= -->
+<section class="page" id="rotation-3" data-date="Wednesday 10/14" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956673" data-title="No Rhyme Songs" data-blurb="Tell a story with imagery and natural speech instead of rhyme." hidden>
+  <p class="lesson-num"></p>
+  <h2>No Rhyme Songs</h2>
+  <p class="goal">Write a song with no rhymes, so your story, images, and feelings have to carry it.</p>
+
+  <h3>Why write without rhyme?</h3>
+  <p>Without a rhyme scheme to lean on, you have to focus on storytelling, imagery, and emotional connection. This exercise shows whether your song has substance beyond clever wordplay, and it helps you find the natural rhythm of how you speak.</p>
+  <h4>A long tradition</h4>
+  <p>Unrhymed songs have deep roots in folk music around the world. Old ballads often put the story ahead of rhyme. In modern music, artists like Leonard Cohen, Bob Dylan, and Sufjan Stevens have written powerful songs with little or no rhyme.</p>
+
+  <h3>Without rhyme, these tools do the work</h3>
+  <ul>
+    <li><strong>Steady rhythm:</strong> matching lines have about the same number of syllables.</li>
+    <li><strong>Repetition:</strong> a key word or phrase comes back, especially in the chorus.</li>
+    <li><strong>Parallel structure:</strong> lines built the same way (“I left the… / I left the…”).</li>
+    <li><strong>Strong imagery:</strong> concrete details from your object writing.</li>
+  </ul>
+
+  <h3>Example</h3>
+  <div class="lyric">
+    <h4>Verse 1</h4>
+    <p>Walking through the empty hallway after school</p>
+    <p>Doors slam shut like thunder in the distance</p>
+    <p>My backpack weighs heavy with unfinished grades</p>
+    <p>The cleaning lady nods as she mops the floor</p>
+    <p>Her phone plays something soft and forgotten</p>
+    <p>While the fluorescent lights buzz overhead</p>
+    <h4>Verse 2</h4>
+    <p>Outside, the cars are pulling away</p>
+    <p>Kids laughing in Cub Corner on the first floor</p>
+    <p>My phone buzzes with messages from friends</p>
+    <p>Making plans I can’t join</p>
+    <p>The parking lot empties one car at a time</p>
+    <p>Until only mine remains</p>
+    <h4>Chorus</h4>
+    <p>Driving home after too many bad grades</p>
+    <p>Past houses where families gather together</p>
+    <p>Kitchen windows glowing warm and yellow</p>
+    <p>I wonder what they talk about at home</p>
+    <p>If they talk about their kids’ bad grades</p>
+    <p>Or if they sit quiet, in silence</p>
+  </div>
+  <p>Notice the object-writing details: slamming doors, buzzing lights, glowing yellow windows. They do the work rhyme would usually do.</p>
+
+  <details>
+    <summary>Advanced no-rhyme techniques</summary>
+    <div class="inner">
+      <ul>
+        <li><strong>Stream of consciousness:</strong> write your thoughts exactly as they come, without editing for logic. It can sound very honest.</li>
+        <li><strong>Dialogue:</strong> include real conversations or overheard bits to add realism and character.</li>
+        <li><strong>Time jumping:</strong> move between different times in the same song to show how experiences connect.</li>
+        <li><strong>Multiple perspectives:</strong> tell the same story from different points of view.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Listen: famous songs without rhyme</h3>
+  <ul class="vids">
+    <li data-yt="2vdqzKXJYlk" data-title="Moonlight in Vermont" data-note="A jazz standard famous for having no rhymes at all."></li>
+    <li data-yt="Eo2ZsAOlvEM" data-title="America" data-by="Simon &amp; Garfunkel" data-note="A road-trip story told in plain, natural speech."></li>
+    <li data-yt="gwg2sdRdahM" data-title="Killing the Blues" data-note="Listen for how images carry the song."></li>
+  </ul>
+
+  <div class="activity">
+    <h3>No Rhyme Song Challenge</h3>
+    <p>Your song needs at least a verse, a chorus, and a bridge.</p>
+    <ol class="steps">
+      <li>Choose one specific story or idea that happened recently. Don’t try to cover too much ground.</li>
+      <li>Write like you’re telling a friend about it. Use natural speech patterns.</li>
+      <li>Paint the scene with vivid sensory details (use your object writing skills).</li>
+      <li>Focus on the emotional journey, not clever wordplay.</li>
+      <li>Don’t force rhymes. If one happens naturally, that’s fine, but don’t chase it.</li>
+      <li>Read your lyrics out loud to make sure they flow when spoken.</li>
+    </ol>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+      <a class="btn" data-upload="rotation-3" href="#">Upload your No Rhyme Song lyrics</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LESSON 4 THEORY ================= -->
+<section class="page" id="toolkit" data-title="Music Theory Toolkit" data-blurb="Intervals, scales, and triads: where melodies and chords come from." hidden>
+  <p class="lesson-num">Reference</p>
+  <h2>Music Theory Toolkit: Intervals, Scales, and Triads</h2>
+  <p class="goal">Understand how melodies come from scales and how chords are built from the same scale, so you can use both in your songs. Come back to this page whenever you need it.</p>
+
+  <p>Try it on the keyboard: tap any two keys to hear them and see the distance between them.</p>
+  <div class="kb" id="kb" aria-label="One-octave piano keyboard"></div>
+  <p class="kb-out" id="kb-out" aria-live="polite">Tap a first note.</p>
+
+  <details open>
+    <summary>Part 1: Half steps and whole steps</summary>
+    <div class="inner">
+      <p>A <strong>half step</strong> (also called a <strong>semitone</strong>) is the smallest distance between two notes in Western music. On a piano, it’s the very next key, black or white. A <strong>whole step</strong> (a <strong>tone</strong>) is two half steps.</p>
+      <ul>
+        <li>E–F and B–C are half steps with no black key between them.</li>
+        <li>A sharp (♯) raises a note a half step. A flat (♭) lowers it a half step.</li>
+        <li>One key can have two names, like C♯ and D♭. These are <strong>enharmonic equivalents</strong>.</li>
+      </ul>
+      <div class="box">
+        <h4>In GarageBand’s piano roll</h4>
+        <p>Each row in the piano roll is one half step. Move a note up one row and it goes up a semitone; move it up two rows for a whole step. Twelve rows up brings you to the same note an octave higher.</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Part 2: Intervals</summary>
+    <div class="inner">
+      <p>An <strong>interval</strong> is the distance between two notes. Its name has two parts.</p>
+      <p><strong>Number:</strong> count the letter names from bottom to top, including both. C to G is C-D-E-F-G, so it’s a 5th. Sharps and flats don’t change the number.</p>
+      <p><strong>Quality:</strong> compare the top note to the major scale of the bottom note. Unisons, 4ths, 5ths, and octaves are <strong>perfect</strong>. 2nds, 3rds, 6ths, and 7ths are <strong>major</strong>. Make a major interval a half step smaller and it’s <strong>minor</strong>. A half step larger than major or perfect is <strong>augmented</strong>. A half step smaller than minor or perfect is <strong>diminished</strong>.</p>
+      <div class="table-wrap"><table>
+        <tr><th>Half steps from C</th><th>Note</th><th>Interval</th></tr>
+        <tr><td>0</td><td>C</td><td>Perfect unison (P1)</td></tr>
+        <tr><td>1</td><td>D♭</td><td>Minor 2nd (m2)</td></tr>
+        <tr><td>2</td><td>D</td><td>Major 2nd (M2)</td></tr>
+        <tr><td>3</td><td>E♭</td><td>Minor 3rd (m3)</td></tr>
+        <tr><td>4</td><td>E</td><td>Major 3rd (M3)</td></tr>
+        <tr><td>5</td><td>F</td><td>Perfect 4th (P4)</td></tr>
+        <tr><td>6</td><td>F♯/G♭</td><td>Tritone</td></tr>
+        <tr><td>7</td><td>G</td><td>Perfect 5th (P5)</td></tr>
+        <tr><td>8</td><td>A♭</td><td>Minor 6th (m6)</td></tr>
+        <tr><td>9</td><td>A</td><td>Major 6th (M6)</td></tr>
+        <tr><td>10</td><td>B♭</td><td>Minor 7th (m7)</td></tr>
+        <tr><td>11</td><td>B</td><td>Major 7th (M7)</td></tr>
+        <tr><td>12</td><td>C</td><td>Perfect octave (P8)</td></tr>
+      </table></div>
+      <h4>Consonance and dissonance</h4>
+      <p>Octaves, 5ths, 3rds, and 6ths sound stable (consonant). The 4th can sound stable or tense depending on context. 2nds, 7ths, and the tritone sound tense (dissonant) and want to resolve. Dissonance isn’t “bad.” Tension and release is what makes music exciting, and songwriters use it on purpose.</p>
+      <p><em>Why “perfect”?</em> Musicians give different reasons. Some point to their very stable sound. Others note that perfect intervals stay perfect when you flip them upside down (invert them).</p>
+      <p><em>Producer tip:</em> a root plus a perfect 5th (7 rows up in the piano roll) is a <strong>power chord</strong>, the backbone of a lot of rock and electronic music.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Part 3: Major scales</summary>
+    <div class="inner">
+      <p>Every major scale follows the same pattern of steps:</p>
+      <p style="font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:.08em">W W H W W W H</p>
+      <p>Rules: 8 notes, the same starting and ending note, every letter name used once, and no double sharps or double flats.</p>
+      <ol class="steps">
+        <li>Write the letters from G to G: G A B C D E F G.</li>
+        <li>Write the pattern underneath the gaps.</li>
+        <li>Add sharps where needed to fit the pattern: <strong>G A B C D E F♯ G</strong>.</li>
+      </ol>
+      <p>A common mistake is skipping the first whole step. If your scale ends on a different note than it started on, check your steps again.</p>
+      <p><em>Try it:</em> build D major yourself. (Check: it has two sharps.)</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Part 4: Minor scales</summary>
+    <div class="inner">
+      <ul>
+        <li><strong>Natural minor</strong> pattern: W H W W H W W.</li>
+        <li><strong>Relative minor</strong> shares the key signature of a major key. Start on the 6th note of the major scale (or go down 3 half steps). A minor is the relative minor of C major; E minor is the relative minor of G major.</li>
+        <li><strong>Parallel minor</strong> starts on the same note as the major scale. Lower the 3rd, 6th, and 7th by a half step. C major becomes C minor: C D E♭ F G A♭ B♭ C.</li>
+        <li><strong>Harmonic minor</strong> raises the 7th a half step, so it pulls strongly back home.</li>
+        <li><strong>Melodic minor</strong> raises the 6th and 7th going up, and goes back to natural minor coming down.</li>
+      </ul>
+      <p>Major often sounds bright and minor often sounds darker, but listen and decide for yourself.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Part 5: Triads</summary>
+    <div class="inner">
+      <p>A <strong>triad</strong> is a three-note chord built by stacking thirds: root, 3rd, and 5th. In root position on the staff, the notes sit all on lines or all in spaces, like a snowman.</p>
+      <div class="table-wrap"><table>
+        <tr><th>Quality</th><th>Built from</th><th>On C</th><th>Written</th></tr>
+        <tr><td>Major</td><td>M3 + P5</td><td>C E G</td><td>C</td></tr>
+        <tr><td>Minor</td><td>m3 + P5</td><td>C E♭ G</td><td>Cm</td></tr>
+        <tr><td>Diminished</td><td>m3 + dim 5th</td><td>C E♭ G♭</td><td>C° or Cdim</td></tr>
+        <tr><td>Augmented</td><td>M3 + aug 5th</td><td>C E G♯</td><td>C+ or Caug</td></tr>
+      </table></div>
+      <p>To build any triad, start with the major version, then adjust the 3rd and 5th. <strong>Inversions</strong> use the same notes with a different one on the bottom: 3rd on the bottom is first inversion, 5th on the bottom is second inversion. Inversions help chords connect smoothly.</p>
+      <p><em>Try it:</em> tap C, E, and G on the keyboard. Then change E to E♭. What changed in the sound?</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Part 6: Chords in a key</summary>
+    <div class="inner">
+      <p>Build a triad on every note of the scale, using only notes from that scale. Tap a chord to hear it.</p>
+      <div class="table-wrap"><table>
+        <tr><th>C major</th><td>I<br>C</td><td>ii<br>Dm</td><td>iii<br>Em</td><td>IV<br>F</td><td>V<br>G</td><td>vi<br>Am</td><td>vii°<br>B°</td></tr>
+        <tr><th>A minor</th><td>i<br>Am</td><td>ii°<br>B°</td><td>III<br>C</td><td>iv<br>Dm</td><td>v<br>Em</td><td>VI<br>F</td><td>VII<br>G</td></tr>
+      </table></div>
+      <div class="btn-row">
+        <button class="btn" data-chord="C">C</button><button class="btn" data-chord="Dm">Dm</button><button class="btn" data-chord="Em">Em</button><button class="btn" data-chord="F">F</button><button class="btn" data-chord="G">G</button><button class="btn" data-chord="Am">Am</button><button class="btn" data-chord="Bdim">B°</button>
+      </div>
+      <p>Capital Roman numerals are major chords, lowercase are minor, and ° is diminished. In minor keys, songwriters often make v major (V, E in A minor) for a stronger pull home.</p>
+      <p>The pattern is the same in every key, so Roman numerals let you move a progression to a key that fits your voice. Progressions to explore: I–V–vi–IV, I–IV–V–I, ii–V–I.</p>
+      <p><em>Try it:</em> build all seven chords in G major.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Part 7: How chords move</summary>
+    <div class="inner">
+      <ul>
+        <li><strong>Tonic</strong> chords (I, plus vi and iii) sound like home.</li>
+        <li><strong>Subdominant</strong> chords (IV, ii) move away from home.</li>
+        <li><strong>Dominant</strong> chords (V, vii°) create tension that pulls back to I. They contain the leading tone (“ti”), which wants to rise a half step to “do.”</li>
+      </ul>
+      <h4>Cadences (phrase endings)</h4>
+      <div class="table-wrap"><table>
+        <tr><th>Cadence</th><th>Chords</th><th>Sounds</th><th>Hear it</th></tr>
+        <tr><td>Authentic</td><td>V–I</td><td>Strongly finished</td><td><button class="btn" data-pair="G|C">G → C</button></td></tr>
+        <tr><td>Plagal</td><td>IV–I</td><td>Softly finished</td><td><button class="btn" data-pair="F|C">F → C</button></td></tr>
+        <tr><td>Half</td><td>ends on V</td><td>Unfinished</td><td><button class="btn" data-pair="C|G">C → G</button></td></tr>
+        <tr><td>Deceptive</td><td>V–vi</td><td>Surprise</td><td><button class="btn" data-pair="G|Am">G → Am</button></td></tr>
+      </table></div>
+      <p>For each section of your song: should it end finished, unfinished, or surprising?</p>
+      <div class="box">
+        <h4>Song spotlight: “Hallelujah” by Leonard Cohen</h4>
+        <p>In C major, the first verse moves through I and vi (C and Am), then IV, V, and back to I (F, G, C). Near the end it surprises you: an <strong>E major</strong> chord (the V of A minor) pulls the line to land on Am instead of home. What makes this song famous among songwriters is that the words of the first verse describe the very chord moves you’re hearing as they happen. Listen for it, and see if you can follow the Roman numerals.</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Part 8: Building melodies</summary>
+    <div class="inner">
+      <ol class="steps">
+        <li>Pick a key and write out its scale. Those are your melody notes.</li>
+        <li>Move mostly by step, with a few leaps for emphasis. After a big leap, step back the other way.</li>
+        <li>Put chord tones on strong beats. Use other scale notes as passing tones in between.</li>
+        <li>Use tendency tones: “ti” pulls up to “do,” “fa” pulls down to “mi,” “re” pulls down to “do.”</li>
+        <li>End finished phrases on “do” over the I chord. End phrases that should hang on scale degree 2 or 5 over V.</li>
+        <li>Stay in a comfortable singing range, and make the chorus a little higher or more energetic than the verse.</li>
+      </ol>
+      <p>Sing or play each phrase. Does it sound finished or unfinished? Why?</p>
+    </div>
+  </details>
+</section>
+
+<!-- ================= LESSON 5 ================= -->
+<section class="page" id="rotation-4" data-date="Friday 10/16" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956672" data-title="Two-Chord Songs" data-blurb="With only two chords, melody, rhythm, and lyrics carry the song." hidden>
+  <p class="lesson-num"></p>
+  <h2>Two-Chord Songs</h2>
+  <p class="goal">Write a song over just two chords, so your melody, rhythm, and lyrics have to carry it.</p>
+
+  <h3>The power of limitation</h3>
+  <p>Using only one or two chords forces you to focus on melody, rhythm, and lyrics instead of complicated chord progressions. That limit often leads to more creative ideas everywhere else, and the results can be surprisingly powerful and memorable.</p>
+  <p>Two-chord songs show up across music history, from old folk songs to modern pop hits. The blues tradition in particular shows how much emotion you can get from very few chord changes.</p>
+
+  <h3>Lead sheets and chord charts</h3>
+  <ul>
+    <li>A <strong>lead sheet</strong> has the melody written in notation, with chord symbols above it. Songs usually include the lyrics.</li>
+    <li>A <strong>chord chart</strong> shows only chord symbols, with no notation. For pop songs, it usually includes the lyrics.</li>
+  </ul>
+  <p>Here’s a short chord chart for a made-up two-chord song. The chord sits right above the syllable where it changes.</p>
+<pre class="chart"><b>Verse</b>
+Em                         C
+Headlights sweep across the ceiling
+Em                          C
+Somebody’s radio two floors down
+
+<b>Chorus</b>
+C                Em
+Waiting for the late bus
+C                Em
+Waiting for the late bus home</pre>
+
+  <h3>Common two-chord combinations</h3>
+  <p>Tap each pair to hear it go back and forth.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Pair</th><th>Feeling</th><th>Hear it</th></tr>
+    <tr><th colspan="3">Minor to major</th></tr>
+    <tr><td>Am to F</td><td>Resolution and hope</td><td><button class="btn" data-pair="Am|F">Play</button></td></tr>
+    <tr><td>Em to C</td><td>Gentle, thoughtful</td><td><button class="btn" data-pair="Em|C">Play</button></td></tr>
+    <tr><td>Dm to B♭</td><td>Darker, mysterious</td><td><button class="btn" data-pair="Dm|Bb">Play</button></td></tr>
+    <tr><th colspan="3">Major</th></tr>
+    <tr><td>G to C</td><td>Bright, optimistic, folk-like</td><td><button class="btn" data-pair="G|C">Play</button></td></tr>
+    <tr><td>D to A</td><td>Strong, anthem-like</td><td><button class="btn" data-pair="D|A">Play</button></td></tr>
+    <tr><td>C to F</td><td>Warm, comfortable</td><td><button class="btn" data-pair="C|F">Play</button></td></tr>
+    <tr><th colspan="3">Modal (minor chord to the major chord a whole step below)</th></tr>
+    <tr><td>Am to G</td><td>Floating, unresolved</td><td><button class="btn" data-pair="Am|G">Play</button></td></tr>
+    <tr><td>Em to D</td><td>Melancholy but strong</td><td><button class="btn" data-pair="Em|D">Play</button></td></tr>
+  </table></div>
+
+  <h3>Making two chords interesting</h3>
+  <details>
+    <summary>Rhythm</summary>
+    <div class="inner"><ul>
+      <li>Verse: slow, fingerpicked arpeggios (one chord note at a time)</li>
+      <li>Chorus: fast, driving strumming</li>
+      <li>Bridge: syncopated, off-beat accents</li>
+    </ul></div>
+  </details>
+  <details>
+    <summary>Melody</summary>
+    <div class="inner">
+      <ul>
+        <li>Use different octaves for different sections.</li>
+        <li>Start each section on a different note.</li>
+        <li>Create call-and-response between vocal lines.</li>
+        <li>Add harmonies that highlight different chord tones.</li>
+      </ul>
+      <h4>Melody shapes</h4>
+      <p>Songwriting professor Jimmy Kachulis describes melodies by their shape. Try a few over your two chords:</p>
+      <div class="table-wrap"><table>
+        <tr><th>Shape</th><th>What it does</th></tr>
+        <tr><td>Stationary</td><td>Stays on one note, like a straight line</td></tr>
+        <tr><td>Zig-zag</td><td>Decorates one note with the notes just above and below</td></tr>
+        <tr><td>Ascending</td><td>Starts low and climbs</td></tr>
+        <tr><td>Descending</td><td>Starts high and falls</td></tr>
+        <tr><td>Arch</td><td>Goes up, then comes down</td></tr>
+        <tr><td>Inverted arch</td><td>Goes down, then comes back up</td></tr>
+      </table></div>
+      <p>Note length matters too. Verses often use shorter notes packed close together, like talking. Choruses often use longer notes with more space, which makes the words feel bigger and more dramatic.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Dynamics</summary>
+    <div class="inner"><ul>
+      <li>Soft verses with whispered vocals</li>
+      <li>Loud, passionate choruses</li>
+      <li>Instrumental breaks with just the chords</li>
+      <li>A cappella sections that spotlight the melody</li>
+    </ul></div>
+  </details>
+  <details>
+    <summary>Texture</summary>
+    <div class="inner"><ul>
+      <li>Add percussion in some sections only.</li>
+      <li>Switch instruments (acoustic vs. electric guitar).</li>
+      <li>Layer vocals to thicken the chorus.</li>
+      <li>Strip down to voice and one instrument for intimate moments.</li>
+    </ul></div>
+  </details>
+
+  <h3>Listen: two-chord songs</h3>
+  <ul class="vids">
+    <li data-key="born-in-the-usa" data-title="Born in the U.S.A." data-by="Bruce Springsteen" data-note="Chords: B and E (I and IV)."></li>
+    <li data-key="eleanor-rigby" data-title="Eleanor Rigby" data-by="The Beatles" data-note="Mostly Em and C. The string arrangement and storytelling carry it."></li>
+    <li data-key="day-o" data-title="Day-O (The Banana Boat Song)" data-note="Chords: C and F."></li>
+    <li data-key="therefore-i-am" data-title="Therefore I Am" data-by="Billie Eilish" data-note="Chords: Dm and A (i and V in D minor)."></li>
+    <li data-key="finneas" data-title="Finneas producing “Therefore I Am”" data-note="Watch how production adds variety to two chords."></li>
+  </ul>
+
+  <div class="activity">
+    <h3>Class activity: Write a two-chord song</h3>
+    <ol class="steps">
+      <li>Choose your two chords and practice the progression until it feels natural.</li>
+      <li>Experiment with different rhythmic patterns.</li>
+      <li>Create a strong melody that works over both chords and uses chord tones well.</li>
+      <li>Use rhythm changes to create contrast between sections.</li>
+      <li>Vary your melody for the verse, chorus, and bridge while keeping the same chords.</li>
+      <li>Focus on storytelling in the lyrics, since the chords won’t carry the song.</li>
+      <li>Experiment with different chord voicings (inversions) for subtle variety.</li>
+    </ol>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+      <a class="btn" data-upload="rotation-4" href="#">Upload your song</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LESSON 6 ================= -->
+<section class="page" id="rotation-5" data-date="Tuesday 10/20" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956671" data-title="AABA Song Form" data-blurb="Three verses with the same melody, one contrasting bridge." hidden>
+  <p class="lesson-num"></p>
+  <h2>AABA Song Form</h2>
+  <p class="goal">Write a song in AABA form, the classic structure behind many of America’s best-known songs.</p>
+
+  <div class="form-row" aria-label="A A B A">
+    <div>A<small>8 bars</small></div>
+    <div>A<small>8 bars</small></div>
+    <div class="b">B<small>bridge</small></div>
+    <div>A<small>8 bars</small></div>
+  </div>
+
+  <h3>How AABA is different</h3>
+  <p>AABA dominated popular music from the 1920s through the 1950s and still influences songwriters today. Unlike a verse-chorus song, it uses:</p>
+  <ul>
+    <li><strong>A sections</strong> as verses, with the same melody and different lyrics</li>
+    <li>a <strong>B section</strong> (the bridge) with a contrasting melody</li>
+    <li><strong>no chorus</strong>: instead, a <strong>refrain</strong> line returns in each A section</li>
+    <li>traditionally <strong>32 bars</strong>, 8 bars per section</li>
+  </ul>
+  <h4>Where it came from</h4>
+  <p>AABA grew out of Tin Pan Alley, the New York songwriting scene, and became the standard form for American popular songs. Composers like George Gershwin, Cole Porter, and Irving Berlin perfected it. It shaped jazz standards and early rock and roll, and it gives you an alternative to the verse-chorus form you hear everywhere today.</p>
+
+  <h3>Section by section</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Section</th><th>Job</th></tr>
+    <tr><td>A1</td><td>Sets up the main melody and introduces the refrain</td></tr>
+    <tr><td>A2</td><td>Same melody; develops the story and ends with the refrain</td></tr>
+    <tr><td>B</td><td>Contrasting melody and harmony; a new perspective</td></tr>
+    <tr><td>A3</td><td>Original melody returns; resolves the story with the refrain</td></tr>
+  </table></div>
+
+  <h3>Extended example</h3>
+  <p>The refrain, “I’m just looking for magic,” closes every A section.</p>
+  <div class="lyric">
+    <h4>A1: Setting up the situation</h4>
+    <p>I’ve been searching for something real</p>
+    <p>In a world that feels like plastic</p>
+    <p>Every face I see looks the same</p>
+    <p>Every conversation feels rehearsed</p>
+    <p>Walking through these crowded streets</p>
+    <p>But feeling so alone</p>
+    <p>Everyone’s connected to their screens</p>
+    <p>I’m just looking for magic</p>
+    <h4>A2: Developing the theme</h4>
+    <p>Coffee shops and crowded trains</p>
+    <p>Everyone staring at their phones</p>
+    <p>Conversations feel so empty</p>
+    <p>Like we’re reading from a script</p>
+    <p>Dating apps and social media</p>
+    <p>Promise connection but deliver less</p>
+    <p>Swiping left through all these faces</p>
+    <p>I’m just looking for magic</p>
+    <h4>B: A new perspective</h4>
+    <p>Maybe magic isn’t something you find</p>
+    <p>Hidden in some distant place</p>
+    <p>Maybe it’s something you create</p>
+    <p>In the small moments between heartbeats</p>
+    <p>In the way strangers’ eyes meet</p>
+    <p>In the silence we don’t need to fill</p>
+    <p>In the courage to be vulnerable</p>
+    <p>When the world demands perfection</p>
+    <h4>A3: Resolution</h4>
+    <p>Now I see it in your smile</p>
+    <p>In the way you laugh at nothing</p>
+    <p>In how you listen with your whole heart</p>
+    <p>When I tell you my worst fears</p>
+    <p>In the way you hold my hand</p>
+    <p>Like it’s the most natural thing</p>
+    <p>In this moment, right here, right now</p>
+    <p>I’m just looking for magic</p>
+  </div>
+
+  <h3>Chord progressions for AABA</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Style</th><th>A sections</th><th>B section</th></tr>
+    <tr><td>Classic jazz</td><td>| C | Am | Dm | G7 | C | Am | Dm G7 | C |</td><td>| Em | Am | Dm | G7 | Em | Am | Dm | G7 |</td></tr>
+    <tr><td>Folk/country</td><td>| G | G | C | G | G | G | D | G |</td><td>| C | C | G | G | C | C | G D | G |</td></tr>
+    <tr><td>Modern pop</td><td>| Am | F | C | G | Am | F | C G | Am |</td><td>| F | C | G | Am | F | C | G | G |</td></tr>
+  </table></div>
+  <p>Notice how each B section starts on a different chord than its A sections. That’s the contrast.</p>
+
+  <details>
+    <summary>AABA variations</summary>
+    <div class="inner"><ul>
+      <li><strong>AABA + tag:</strong> add a short ending that repeats the refrain.</li>
+      <li><strong>AABA + intro:</strong> begin with an instrumental intro using the A melody.</li>
+      <li><strong>Double AABA:</strong> repeat the whole form with new lyrics.</li>
+      <li><strong>Modified bridge:</strong> make the B section longer or shorter (12 or 16 bars instead of 8).</li>
+    </ul></div>
+  </details>
+
+  <h3>Listen: AABA songs</h3>
+  <ul class="vids">
+    <li data-key="find-another-you" data-title="I’m Gonna Find Another You" data-by="John Mayer" data-note="A modern AABA with a clear refrain."></li>
+    <li data-key="angeles" data-title="Angeles" data-by="Elliott Smith" data-note="AABA in indie music."></li>
+    <li data-key="over-the-rainbow" data-title="Over the Rainbow" data-by="Harold Arlen" data-note="A classic showing the form’s emotional power."></li>
+    <li data-key="yesterday" data-title="Yesterday" data-by="The Beatles" data-note="AABA with a simple, memorable melody."></li>
+    <li data-key="georgia" data-title="Georgia on My Mind" data-by="Hoagy Carmichael" data-note="A jazz standard built on the form."></li>
+  </ul>
+
+  <h3>Common mistakes</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Mistake</th><th>Fix</th></tr>
+    <tr><td>The B section sounds too much like the A sections</td><td>Use different chords, a different melody range, and a different rhythm.</td></tr>
+    <tr><td>The refrain is weak or forgettable</td><td>Make it the strongest, most memorable line in the song. It’s your hook.</td></tr>
+    <tr><td>The B section doesn’t connect to the story</td><td>Use B to give context, ask a question, or offer a different angle on the A sections.</td></tr>
+  </table></div>
+
+  <div class="activity">
+    <h3>Class activity: Write a simple AABA song</h3>
+    <ol class="steps">
+      <li>Start with your refrain line. It’s your song’s main message and emotional center.</li>
+      <li>Write your first A section, building up to the refrain.</li>
+      <li>Write a second A section that develops the story or emotion further.</li>
+      <li>Write a contrasting B section that offers a new perspective, asks a question, or gives context.</li>
+      <li>Return to A for a satisfying ending that resolves the story.</li>
+      <li>Make sure the A and B melodies contrast while still sounding like one song.</li>
+    </ol>
+    <p>Share your Google Doc with the lyrics and upload your GarageBand file.</p>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+      <a class="btn" data-upload="rotation-5" href="#">Upload your AABA song</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LESSON 7 ================= -->
+<section class="page" id="rotation-6" data-date="Wednesday 10/21 – Thursday 10/22" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956670" data-title="Verb Strengthening" data-blurb="Swap weak verbs for strong ones that carry action, image, and mood." hidden>
+  <p class="lesson-num"></p>
+  <h2>Verb Strengthening</h2>
+  <p class="goal">Revise your lyrics with strong, specific verbs that show action, paint pictures, and set the mood all at once.</p>
+
+  <h3>Why verbs matter</h3>
+  <p>Verbs are the engine of language. One good verb can carry action, emotion, imagery, and character at the same time. Strong verbs create movement, set the mood, and help listeners picture and feel what you’re describing. When you hear a vivid action word, you almost feel the motion yourself, which is why songs with strong verbs stick.</p>
+
+  <h3>The verb upgrade process</h3>
+  <ol class="steps">
+    <li>Write your lyrics first without worrying about verbs. Just get the ideas down.</li>
+    <li>Underline every verb, including helping and linking verbs.</li>
+    <li>Spot the weak ones: was, had, went, got, did, made, said, looked, walked.</li>
+    <li>Replace them with stronger verbs that add meaning and imagery.</li>
+    <li>Remove adverbs that the new verb makes unnecessary.</li>
+    <li>Read each line aloud to make sure it still flows.</li>
+  </ol>
+
+  <h3>Weak vs. strong</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Weak verb + adverb</th><th>Strong verb</th><th>Effect</th></tr>
+    <tr><td>walked quickly</td><td>sprinted, rushed, darted, bolted</td><td>Urgency and energy</td></tr>
+    <tr><td>talked loudly</td><td>shouted, bellowed, roared, proclaimed</td><td>Emotion and volume</td></tr>
+    <tr><td>looked angrily</td><td>glared, scowled, stared, pierced</td><td>A specific emotion</td></tr>
+    <tr><td>moved slowly</td><td>crawled, crept, drifted, meandered</td><td>A specific pace and mood</td></tr>
+    <tr><td>fell down hard</td><td>crashed, plummeted, collapsed, tumbled</td><td>Drama and impact</td></tr>
+    <tr><td>went away</td><td>vanished, escaped, fled, dissolved</td><td>More mysterious and specific</td></tr>
+    <tr><td>made music</td><td>composed, crafted, wove</td><td>Shows the creative process</td></tr>
+    <tr><td>said softly</td><td>whispered, murmured, breathed, confided</td><td>Intimate and specific</td></tr>
+    <tr><td>got angry</td><td>erupted, seethed, blazed, exploded</td><td>Physical and emotional</td></tr>
+    <tr><td>was sad</td><td>grieved, mourned, ached, wilted</td><td>Deeper emotion</td></tr>
+  </table></div>
+
+  <details>
+    <summary>Strong verbs by category</summary>
+    <div class="inner">
+      <h4>Movement</h4>
+      <ul>
+        <li>Gentle: drift, float, glide, sway, wander</li>
+        <li>Aggressive: charge, storm, attack, invade, conquer</li>
+        <li>Precise: dart, slice, pierce, thread, weave</li>
+        <li>Chaotic: tumble, spiral, crash, shatter, explode</li>
+      </ul>
+      <h4>Emotion</h4>
+      <ul>
+        <li>Joy: sparkle, dance, sing, celebrate, radiate</li>
+        <li>Sadness: crumble, wilt, dissolve, sink, fade</li>
+        <li>Anger: burn, rage, storm, seethe, explode</li>
+        <li>Love: embrace, cherish, adore, treasure</li>
+      </ul>
+      <h4>Senses</h4>
+      <ul>
+        <li>Sight: gleam, shimmer, flash, glow, shadow</li>
+        <li>Sound: whisper, roar, echo, ring, silence</li>
+        <li>Touch: caress, scratch, burn, freeze, tingle</li>
+        <li>Taste and smell: savor, devour, inhale, breathe</li>
+      </ul>
+      <h4>By genre</h4>
+      <ul>
+        <li>Folk/country, earthy and physical: plow, harvest, wander, settle, weather</li>
+        <li>Rock/pop, energetic: explode, ignite, shatter, soar, crash</li>
+        <li>R&amp;B/soul, flowing: flow, melt, burn, breathe</li>
+        <li>Hip-hop, sharp and percussive: snap, pop, slice, drop, hit</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Verbs as instant metaphors</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Line</th><th>What the verb suggests</th></tr>
+    <tr><td>She avalanched into the room</td><td>Overwhelming force, unstoppable momentum</td></tr>
+    <tr><td>His words slithered through the conversation</td><td>Something sneaky or dangerous</td></tr>
+    <tr><td>The melody cascaded over the audience</td><td>Flowing beauty that surrounds you</td></tr>
+    <tr><td>Time evaporated in her presence</td><td>Time vanishing like magic</td></tr>
+    <tr><td>Memories crystallized in that moment</td><td>Sudden clarity that lasts</td></tr>
+  </table></div>
+
+  <h3>Before and after</h3>
+  <div class="box">
+    <p><strong>Before:</strong> The rain fell heavily on the roof<br><strong>After:</strong> Rain hammered the tin roof<br><em>Why:</em> “hammered” is percussive, sounds like the rain, and creates rhythm. “Fell heavily” was weak and predictable.</p>
+    <p><strong>Before:</strong> Love was growing between them<br><strong>After:</strong> Love bloomed in the space between their words<br><em>Why:</em> “bloomed” is natural and beautiful, and adds an image. “Was growing” was vague.</p>
+  </div>
+
+  <details>
+    <summary>Advanced verb techniques</summary>
+    <div class="inner">
+      <h4>Tense shifts</h4>
+      <p>Present tense makes scenes feel immediate. Past tense works for reflection and storytelling. Mixing them shows time and emotional distance:</p>
+      <div class="lyric">
+        <p>Yesterday you walked away <em>(past: finished)</em></p>
+        <p>Today I’m drowning in the silence <em>(present: ongoing)</em></p>
+        <p>Tomorrow I will learn to breathe again <em>(future: hope)</em></p>
+      </div>
+      <h4>Repetition</h4>
+      <p>Repeating a strong verb creates rhythm and emphasis:</p>
+      <div class="lyric"><p>She runs from the past, runs toward tomorrow</p><p>Runs until her lungs burn with possibility</p></div>
+      <h4>Verb chains</h4>
+      <p>A string of verbs builds intensity:</p>
+      <div class="lyric"><p>The storm gathered, swelled, erupted, then vanished</p><p>Leaving only puddles and the smell of rain</p></div>
+    </div>
+  </details>
+
+  <h3>Where to put your strongest verbs</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Section</th><th>Verb strength</th></tr>
+    <tr><td>Verse</td><td>Medium-strength verbs that build the story</td></tr>
+    <tr><td>Pre-chorus</td><td>Building verbs that create momentum</td></tr>
+    <tr><td>Chorus</td><td>Your strongest, most memorable verbs</td></tr>
+    <tr><td>Bridge</td><td>Contrasting verbs that offer a new angle</td></tr>
+  </table></div>
+
+  <h3>Common mistakes</h3>
+  <ul>
+    <li><strong>Too fancy.</strong> Strong doesn’t mean complicated. “Run” beats “perambulate.”</li>
+    <li><strong>Too much.</strong> If every verb is huge, none stand out. Save the most powerful ones for key moments.</li>
+    <li><strong>Breaking the rhythm.</strong> Always sing the new line. A great word that doesn’t fit the beat doesn’t work. Check that the stressed syllable of your new verb still lands on a strong beat.</li>
+  </ul>
+
+  <details>
+    <summary>Your songwriter’s toolkit</summary>
+    <div class="inner">
+      <ul>
+        <li><strong>Rhyming dictionary:</strong> even for no-rhyme songs, it helps you avoid accidental rhymes.</li>
+        <li><strong>Thesaurus:</strong> especially useful for verb strengthening.</li>
+        <li><strong>Voice recorder:</strong> catch melody ideas during exercises.</li>
+        <li><strong>Notebook:</strong> keep all your exercises in one place.</li>
+        <li><strong>Chord apps and a metronome:</strong> experiment with progressions and rhythm.</li>
+        <li><strong>GarageBand:</strong> record your progress and ideas.</li>
+        <li><strong>Song analysis:</strong> study how professional songwriters use these techniques across genres and eras.</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="activity">
+    <h3>Class activity: Verb strengthening</h3>
+    <h4>Part 1: Upgrade your verbs</h4>
+    <ol class="steps">
+      <li><strong>Identify:</strong> review your lyrics and underline all the verbs.</li>
+      <li><strong>Select:</strong> pick at least one weak or generic verb per section (verse, chorus, and so on) to upgrade.</li>
+      <li><strong>Replace:</strong> choose a stronger verb that does several jobs at once: action and movement, imagery, mood or emotion, and insight into the character.</li>
+    </ol>
+    <p class="example">Example: “She walked into the room” only tells us she wasn’t standing still. “She slithered into the room” adds snake-like imagery and tells us something about who she is.</p>
+    <h4>Part 2: Cut the qualifiers</h4>
+    <ol class="steps">
+      <li>In your revised lyrics, underline every adjective and adverb.</li>
+      <li>Try cutting each one. If a verb needs an adverb to work (“lunged aggressively”), the verb probably isn’t strong enough yet.</li>
+      <li>Choose one strong verb instead of a weak verb plus a modifier. Saying “the dog barked loudly” actually makes “barked” sound quieter.</li>
+    </ol>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+      <a class="btn" data-upload="rotation-6" href="#">Upload your lyrics</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROTATION 7 ================= -->
+<section class="page" id="rotation-7" data-title="Song Draft Project: Plan and Write" data-short="Song Draft Project" data-date="Friday 10/23 – Monday 10/26" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956669" data-blurb="Pick your idea, plan your sections, choose a key and chords, and draft lyrics." hidden>
+  <p class="lesson-num"></p>
+  <h2>Song Draft Project: Plan and Write</h2>
+  <p class="goal">Start your original song: a clear idea, a plan for every section, a key and chords, and a first draft of your lyrics.</p>
+
+  <h3>What you’ll turn in at the end of Rotation 9</h3>
+  <ul class="check" id="deliverables">
+    <li><label><input type="checkbox"> The entire song</label></li>
+    <li><label><input type="checkbox"> A clear song structure: intro, verse, chorus, bridge, outro</label></li>
+    <li><label><input type="checkbox"> Chords</label></li>
+    <li><label><input type="checkbox"> Lyrics</label></li>
+    <li><label><input type="checkbox"> Melody</label></li>
+    <li><label><input type="checkbox"> Your GarageBand session</label></li>
+    <li><label><input type="checkbox"> A chord chart with lyrics</label></li>
+  </ul>
+
+  <h3>Song structure</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Section</th><th>Its job</th></tr>
+    <tr><td>Intro</td><td>Sets the mood before the singing starts</td></tr>
+    <tr><td>Verse</td><td>Tells the story with details</td></tr>
+    <tr><td>Chorus</td><td>Repeats the main idea and hook</td></tr>
+    <tr><td>Bridge</td><td>Adds something new: a twist, a question, a new angle</td></tr>
+    <tr><td>Outro</td><td>Brings the song to a close</td></tr>
+  </table></div>
+
+  <div class="activity">
+    <h3>Today: plan and write</h3>
+    <ol class="steps">
+      <li>Write your one-sentence concept (<a href="#rotation-2">Rotation 2</a>).</li>
+      <li>Choose a form and list your sections in order: intro, verse, chorus, bridge, outro. AABA works too (<a href="#rotation-5">Rotation 5</a>).</li>
+      <li>Pull images from your object writing and ideas from your phone notes.</li>
+      <li>Choose a key, write out its scale, and pick chords from that key (<a href="#toolkit">Theory Toolkit</a>, Parts 3 and 6). Two chords is fine, or use more if you’re ready.</li>
+      <li>Draft lyrics for every section with strong verbs and sensory details (<a href="#rotation-6">Rotation 6</a>). Rhyme is your choice.</li>
+      <li>Write your chords above your lyrics as you go. This becomes your chord chart.</li>
+    </ol>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROTATION 8 ================= -->
+<section class="page" id="rotation-8" data-title="Song Draft Project: Melody and Arrangement" data-short="Song Draft Project" data-date="Tuesday 10/27" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/956668" data-blurb="Build your melody and arrange your song in GarageBand." hidden>
+  <p class="lesson-num"></p>
+  <h2>Song Draft Project: Melody and Arrangement</h2>
+  <p class="goal">Give your lyrics a melody and arrange your song in GarageBand so each section sounds different.</p>
+
+  <h3>Build your melody</h3>
+  <ol class="steps">
+    <li>Use the notes of your scale as your melody notes.</li>
+    <li>Put chord tones on strong beats, especially when the chord changes.</li>
+    <li>Pick a melody shape for each section: ascending, arch, zig-zag, and so on (<a href="#rotation-4">Rotation 4</a>).</li>
+    <li>Keep verse notes shorter and closer together. Give the chorus longer notes and make it a little higher.</li>
+    <li>Sing each line. Do the stressed syllables land on strong beats?</li>
+    <li>End finished phrases on “do” over the I chord. End phrases that should hang on V.</li>
+  </ol>
+  <p>Full melody guide: <a href="#toolkit">Theory Toolkit, Part 8</a>.</p>
+
+  <h3>Arrange it</h3>
+  <p>Arrangement means deciding what plays when. The same chords can feel completely different depending on rhythm, dynamics, and texture.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Tool</th><th>Try</th></tr>
+    <tr><td>Rhythm</td><td>Arpeggios in the verse, strumming or driving chords in the chorus</td></tr>
+    <tr><td>Dynamics</td><td>Soft verse, loud chorus, a quiet moment before the last chorus</td></tr>
+    <tr><td>Texture</td><td>Add drums or a second instrument only in the chorus; strip down in the bridge</td></tr>
+    <tr><td>Intro and outro</td><td>Use your chords or a piece of the melody with no vocals</td></tr>
+  </table></div>
+
+  <div class="activity">
+    <h3>Today in GarageBand</h3>
+    <ol class="steps">
+      <li>Open a new session and set your tempo and key.</li>
+      <li>Record your chord progression on one track (piano or guitar).</li>
+      <li>Record your melody on a second track: sing it, or play it on the MIDI keyboard.</li>
+      <li>Add at least one arrangement change between sections: a drum track, a new instrument, or a dynamics change.</li>
+      <li>Save your GarageBand session!</li>
+    </ol>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROTATION 9 ================= -->
+<section class="page" id="rotation-9" data-title="Song Draft Project: Revise and Submit" data-short="Song Draft Project" data-date="Thursday 10/29" data-canvas="https://mcacubs.instructure.com/courses/6309/modules/items/987645" data-blurb="Revise, finish your chord chart, check your work, and turn it in." hidden>
+  <p class="lesson-num"></p>
+  <h2>Song Draft Project: Revise and Submit</h2>
+  <p class="goal">Polish your song, finish your chord chart, and turn in your project.</p>
+
+  <h3>Revise</h3>
+  <ol class="steps">
+    <li>Find your strongest line and your weakest line.</li>
+    <li>Improve one thing at a time: a stronger verb, a sharper image, a smoother melody note.</li>
+    <li>Play the whole song from start to finish. Does every section do its job?</li>
+  </ol>
+
+  <h3>Example chord chart</h3>
+  <p>Your chord chart shows each chord right above the syllable where it changes. Key: G major. Chords: G (I), C (IV), D (V), Em (vi). The chorus ends with D to G, an authentic cadence.</p>
+<pre class="chart"><b>Intro</b>
+| G | C | G | D |
+
+<b>Verse</b>
+G                       C
+Screen door slaps behind me
+G                         D
+Gravel singing under my shoes
+G                        C
+Crickets tuning up their engines
+Em                D
+Somewhere past the fence
+
+<b>Chorus</b>
+C            G
+Leave the porch light on
+C              D
+Leave it burning till I’m home
+C            G          Em
+Leave the porch light on
+C         D         G
+I’ll find my way back
+
+<b>Bridge</b>
+Em             C
+Miles of road like a ribbon
+Em               D
+Pulling me the other way
+
+<b>Outro</b>
+| C | D | G |</pre>
+
+  <div class="box">
+    <h4>Self-check before you finish</h4>
+    <ul class="check" id="selfcheck">
+      <li><label><input type="checkbox"> Every section has lyrics.</label></li>
+      <li><label><input type="checkbox"> The melody is singable and stays the same in repeated sections.</label></li>
+      <li><label><input type="checkbox"> I know my key and can write out its scale.</label></li>
+      <li><label><input type="checkbox"> I can label my chords with Roman numerals.</label></li>
+      <li><label><input type="checkbox"> I know how each section ends: authentic, plagal, half, or deceptive cadence.</label></li>
+      <li><label><input type="checkbox"> My song has a clear hook or central idea.</label></li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h3>Turn in your project</h3>
+    <ul class="check" id="deliverables-final">
+      <li><label><input type="checkbox"> The entire song, with intro, verse, chorus, bridge, and outro</label></li>
+      <li><label><input type="checkbox"> Chords, lyrics, and melody</label></li>
+      <li><label><input type="checkbox"> Your GarageBand session</label></li>
+      <li><label><input type="checkbox"> A chord chart with lyrics</label></li>
+    </ul>
+    <div class="btn-row">
+      <a class="btn primary" data-coach href="#">Open Songwriting Studio Coach</a>
+      <a class="btn" data-upload="rotation-9" href="#">Upload your final song</a>
+    </div>
+  </div>
+</section>
+
+<footer>Unit 4: Songwriting &amp; Arrangement</footer>
+</main>
+</div>
+
+<script>
+(function(){
+  const pages = Array.from(document.querySelectorAll('.page'));
+  const lessons = pages.filter(p => p.id.startsWith('rotation-'));
+
+  /* ---------- nav, map, headers, pager ---------- */
+  const side = document.getElementById('side-list');
+  const map = document.getElementById('map');
+  const jump = document.getElementById('jump');
+  const addOpt = (v, t) => { const o = document.createElement('option'); o.value = v; o.textContent = t; jump.appendChild(o); };
+  addOpt('home', 'Unit map');
+  const label = p => p.dataset.short || p.dataset.title;
+
+  lessons.forEach((p, i) => {
+    const n = i + 1;
+    const li = document.createElement('li');
+    li.innerHTML = '<a class="lesson-link" href="#' + p.id + '"><span class="n">' + n + '</span><span>' + p.dataset.title + '<small>' + p.dataset.date + '</small></span></a>';
+    side.prepend(li);
+
+    const mi = document.createElement('li');
+    mi.innerHTML = '<span class="n">' + n + '</span><div><span class="date">Rotation ' + n + ', ' + p.dataset.date + '</span><a href="#' + p.id + '">' + p.dataset.title + '</a><p>' + (p.dataset.blurb || '') + '</p></div>';
+    map.prepend(mi);
+    const o = document.createElement('option'); o.value = p.id; o.textContent = n + '. ' + p.dataset.title;
+    jump.insertBefore(o, jump.options[1] || null);
+
+    p.querySelector('.lesson-num').textContent = 'Rotation ' + n + ', ' + p.dataset.date;
+    if (p.dataset.canvas){
+      const row = document.createElement('div');
+      row.className = 'btn-row';
+      row.innerHTML = '<a class="btn" target="_blank" rel="noopener" href="' + p.dataset.canvas + '">Open this rotation in Canvas</a>';
+      p.querySelector('.goal').after(row);
+    }
+
+    const pager = document.createElement('div');
+    pager.className = 'pager';
+    const prev = i === 0 ? '<a href="#home">Unit map</a>' : '<a href="#' + lessons[i-1].id + '">Rotation ' + i + ': ' + lessons[i-1].dataset.title + '</a>';
+    const next = i < lessons.length - 1 ? '<a href="#' + lessons[i+1].id + '">Rotation ' + (n+1) + ': ' + lessons[i+1].dataset.title + '</a>' : '<a href="#home">Back to unit map</a>';
+    pager.innerHTML = prev + next;
+    p.appendChild(pager);
+  });
+
+  const tli = document.createElement('li');
+  tli.innerHTML = '<a class="lesson-link toolkit-link" href="#toolkit"><span class="n">♪</span><span>Theory Toolkit<small>Reference, any time</small></span></a>';
+  side.appendChild(tli);
+  addOpt('toolkit', 'Theory Toolkit');
+  const tk = document.getElementById('toolkit');
+  const tp = document.createElement('div');
+  tp.className = 'pager';
+  tp.innerHTML = '<a href="#home">Unit map</a>';
+  tk.appendChild(tp);
+  jump.addEventListener('change', () => { location.hash = jump.value; });
+
+  function show(){
+    const id = (location.hash || '#home').slice(1);
+    const el = document.getElementById(id);
+    const target = el && el.classList.contains('page') ? id : 'home';
+    pages.forEach(p => p.hidden = p.id !== target);
+    document.querySelectorAll('a.lesson-link').forEach(a => {
+      if (a.getAttribute('href') === '#' + target) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    jump.value = target;
+    document.title = (target === 'home' ? '' : document.getElementById(target).dataset.title + ' | ') + 'Unit 4: Songwriting & Arrangement';
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+
+  /* ---------- coach + upload links ---------- */
+  document.querySelectorAll('[data-coach]').forEach(a => {
+    if (LINKS.coach){ a.href = LINKS.coach; a.target = '_blank'; a.rel = 'noopener'; }
+    else a.remove();
+  });
+  document.querySelectorAll('[data-upload]').forEach(a => {
+    const url = LINKS.uploads[a.dataset.upload];
+    if (url){ a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+    else {
+      const p = document.createElement('p');
+      p.className = 'upload-note';
+      p.textContent = 'Turn this in on Canvas.';
+      a.replaceWith(p);
+    }
+  });
+
+  /* ---------- videos ---------- */
+  function ytId(url){
+    const m = String(url).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
+    return m ? m[1] : null;
+  }
+  document.querySelectorAll('.vids li').forEach(li => {
+    const d = li.dataset;
+    const url = d.yt ? 'https://youtu.be/' + d.yt : (LINKS.videos[d.key] || '');
+    const id = d.yt || ytId(url);
+    let media;
+    if (id){
+      media = document.createElement('button');
+      media.type = 'button';
+      media.className = 'vid-media';
+      media.setAttribute('aria-label', 'Play ' + d.title);
+      media.innerHTML = '<img loading="lazy" alt="" src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg"><span class="play"></span>';
+      media.addEventListener('click', () => {
+        const box = document.createElement('div');
+        box.className = 'vid-media';
+        box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1" title="' + d.title.replace(/"/g, '') + '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+        media.replaceWith(box);
+      });
+    } else {
+      media = document.createElement('a');
+      media.className = 'vid-search';
+      media.target = '_blank'; media.rel = 'noopener';
+      media.href = url || ('https://www.youtube.com/results?search_query=' + encodeURIComponent(d.title + ' ' + (d.by || '')));
+      media.textContent = url ? 'Open video' : 'Find on YouTube';
+    }
+    const body = document.createElement('div');
+    body.className = 'vid-body';
+    body.innerHTML = '<strong></strong>' + (d.by ? '<span></span>' : '') + (d.note ? '<p></p>' : '');
+    body.querySelector('strong').textContent = d.title;
+    if (d.by) body.querySelector('span').textContent = d.by;
+    if (d.note) body.querySelector('p').textContent = d.note;
+    li.append(media, body);
+  });
+
+  /* ---------- audio ---------- */
+  let ctx;
+  function audio(){ if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)(); if (ctx.state === 'suspended') ctx.resume(); return ctx; }
+  function tone(midi, dur, when, vol){
+    const c = audio(), t = c.currentTime + (when || 0);
+    const o = c.createOscillator(), g = c.createGain();
+    o.type = 'triangle'; o.frequency.value = 440 * Math.pow(2, (midi - 69) / 12);
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(vol || 0.25, t + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.001, t + (dur || 0.8));
+    o.connect(g).connect(c.destination);
+    o.start(t); o.stop(t + (dur || 0.8) + 0.05);
+  }
+  const CH = {
+    C:[60,64,67], Cm:[60,63,67], D:[62,66,69], Dm:[62,65,69], E:[64,68,71], Em:[64,67,71],
+    F:[65,69,72], G:[55,59,62], A:[57,61,64], Am:[57,60,64], Bb:[58,62,65], Bdim:[59,62,65]
+  };
+  function chord(name, when, dur){ (CH[name] || []).forEach((m, i) => tone(m, dur || 1.2, (when || 0) + i * 0.04, 0.14)); }
+  document.querySelectorAll('[data-chord]').forEach(b => b.addEventListener('click', () => chord(b.dataset.chord)));
+  document.querySelectorAll('[data-pair]').forEach(b => b.addEventListener('click', () => {
+    const [a, z] = b.dataset.pair.split('|');
+    chord(a, 0, 0.9); chord(z, 0.9, 0.9); chord(a, 1.8, 0.9); chord(z, 2.7, 1.4);
+  }));
+
+  /* ---------- staff hero ---------- */
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const notesG = document.getElementById('notes');
+  const ys = [100, 94, 88, 82, 76, 70, 64, 58, 52];
+  const midis = [60, 62, 64, 65, 67, 69, 71, 72, 74];
+  const solf = ['do','re','mi','fa','sol','la','ti','do','re'];
+  const caption = document.getElementById('staff-caption');
+  lessons.forEach((p, i) => {
+    const x = 90 + i * 70, y = ys[i], up = y > 64;
+    const a = document.createElementNS(svgNS, 'a');
+    a.setAttribute('href', '#' + p.id);
+    a.setAttribute('class', 'note');
+    a.setAttribute('aria-label', 'Rotation ' + (i+1) + ': ' + p.dataset.title);
+    const hit = document.createElementNS(svgNS, 'rect');
+    hit.setAttribute('x', x - 30); hit.setAttribute('y', 10); hit.setAttribute('width', 60); hit.setAttribute('height', 145); hit.setAttribute('fill', 'transparent');
+    const s = document.createElementNS(svgNS, 'line');
+    s.setAttribute('class', 'stem');
+    const sx = up ? x + 7.2 : x - 7.2;
+    s.setAttribute('x1', sx); s.setAttribute('x2', sx);
+    s.setAttribute('y1', y + (up ? -2 : 2)); s.setAttribute('y2', y + (up ? -38 : 38));
+    const e = document.createElementNS(svgNS, 'ellipse');
+    e.setAttribute('cx', x); e.setAttribute('cy', y); e.setAttribute('rx', 8); e.setAttribute('ry', 6);
+    e.setAttribute('transform', 'rotate(-20 ' + x + ' ' + y + ')');
+    const t = document.createElementNS(svgNS, 'text');
+    t.setAttribute('x', x); t.setAttribute('y', 148); t.textContent = i + 1;
+    a.append(hit, s, e, t);
+    const label = 'Rotation ' + (i+1) + ' (' + solf[i] + '): ' + p.dataset.title;
+    a.addEventListener('mouseenter', () => caption.textContent = label);
+    a.addEventListener('focus', () => caption.textContent = label);
+    a.addEventListener('click', ev => {
+      ev.preventDefault();
+      tone(midis[i], 0.9);
+      a.classList.add('ring');
+      caption.textContent = label;
+      setTimeout(() => { a.classList.remove('ring'); location.hash = p.id; }, 350);
+    });
+    notesG.appendChild(a);
+  });
+
+  /* ---------- keyboard ---------- */
+  const kb = document.getElementById('kb'), kbOut = document.getElementById('kb-out');
+  const names = ['C','C♯/D♭','D','D♯/E♭','E','F','F♯/G♭','G','G♯/A♭','A','A♯/B♭','B','C'];
+  const ints = ['perfect unison','minor 2nd','major 2nd','minor 3rd','major 3rd','perfect 4th','tritone','perfect 5th','minor 6th','major 6th','minor 7th','major 7th','perfect octave'];
+  const whiteIdx = [0,2,4,5,7,9,11,12];
+  const blackLeft = {1:0,3:1,6:3,8:4,10:5};
+  const W = 100 / whiteIdx.length;
+  let first = null;
+  for (let k = 0; k <= 12; k++){
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', names[k] + (k === 12 ? ' (high)' : ''));
+    if (whiteIdx.includes(k)){
+      b.className = 'w'; b.style.left = (whiteIdx.indexOf(k) * W) + '%'; b.style.width = W + '%'; b.textContent = names[k];
+    } else {
+      b.className = 'k'; b.style.left = ((blackLeft[k] + 1) * W - W * 0.3) + '%'; b.style.width = (W * 0.6) + '%';
+    }
+    b.addEventListener('click', () => {
+      tone(60 + k, 0.8);
+      if (first === null){
+        kb.querySelectorAll('.sel').forEach(x => x.classList.remove('sel'));
+        first = k; b.classList.add('sel');
+        kbOut.textContent = 'First note: ' + names[k] + '. Now tap a second note.';
+      } else {
+        b.classList.add('sel');
+        const lo = Math.min(first, k), hi = Math.max(first, k), d = hi - lo;
+        kbOut.textContent = names[lo] + ' to ' + names[hi] + ': ' + d + ' half step' + (d === 1 ? '' : 's') + ', a ' + ints[d] + '.';
+        tone(60 + first, 0.9, 0.35, 0.18); tone(60 + k, 0.9, 0.35, 0.18);
+        first = null;
+      }
+    });
+    kb.appendChild(b);
+  }
+
+  /* ---------- timer ---------- */
+  const tEl = document.getElementById('timer'), tStart = document.getElementById('t-start'),
+        tReset = document.getElementById('t-reset'), tStatus = document.getElementById('t-status');
+  let remain = 600, iv = null;
+  const render = () => { tEl.textContent = Math.floor(remain / 60) + ':' + String(remain % 60).padStart(2, '0'); };
+  tStart.addEventListener('click', () => {
+    if (iv){ clearInterval(iv); iv = null; tStart.textContent = 'Resume'; tStatus.textContent = 'Paused.'; return; }
+    if (remain === 0) return;
+    tStart.textContent = 'Pause'; tStatus.textContent = 'Keep your pen moving. Don’t stop to edit.';
+    iv = setInterval(() => {
+      remain--; render();
+      if (remain <= 0){
+        clearInterval(iv); iv = null; tEl.classList.add('done');
+        tStart.textContent = 'Start'; tStatus.textContent = 'Time’s up. Read it back and underline your most vivid line.';
+        tone(72, 0.5); tone(79, 0.8, 0.25);
+      }
+    }, 1000);
+  });
+  tReset.addEventListener('click', () => {
+    clearInterval(iv); iv = null; remain = 600; render();
+    tEl.classList.remove('done'); tStart.textContent = 'Start'; tStatus.textContent = '';
+  });
+
+  /* ---------- checklists remember ticks in this browser ---------- */
+  ['deliverables', 'selfcheck', 'deliverables-final'].forEach(listId => {
+    const boxes = document.querySelectorAll('#' + listId + ' input');
+    const key = 'songwriting-' + listId;
+    let saved = [];
+    try { saved = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
+    boxes.forEach((b, i) => {
+      b.checked = !!saved[i];
+      b.addEventListener('change', () => {
+        try { localStorage.setItem(key, JSON.stringify(Array.from(boxes).map(x => x.checked))); } catch (e) {}
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
